@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1100 550.00001"
+    id="desktop">
+    <defs>
+        <style>
+            .rect {
+                fill: red;
+                stroke: blue;
+            }
+        </style>
+    </defs>
+    <rect
+        class="rect"
+        width="1217.1428"
+        height="574.28571"
+        x="-557.14288"
+        y="115.21935"
+        ry="42.426399"
+        transform="matrix(0.86072661,0,0,0.91987632,-330.05257,384.09185)"
+    />
+</svg>

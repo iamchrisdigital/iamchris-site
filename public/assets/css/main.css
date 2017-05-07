@@ -1,0 +1,302 @@
+/*
+    BACKGROUND COLORS
+*/
+/*
+    GENERAL SECTION
+*/
+html {
+  background-color: #fff; }
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: auto; }
+  body header, body main, body footer, body .container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto; }
+  body .section-contents {
+    max-width: 1200px;
+    margin: 0 auto; }
+  body .title {
+    font-family: 'Lato', helvetica;
+    font-size: calc(1.25em + 2vmax);
+    font-weight: 700;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+  body .subtitle {
+    font-family: 'Lato', helvetica;
+    font-size: calc(1.25em + 1vmax);
+    font-weight: 400;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center; }
+  body .text {
+    font-family: 'Lato', helvetica;
+    font-size: 1.25em;
+    font-weight: 400;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; }
+  body a {
+    color: #000;
+    cursor: pointer; }
+  body hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+/*
+    HEADER SECTION
+*/
+header {
+  position: relative;
+  background-color: #4f4b49;
+  color: #fff; }
+  header #i-am-a-web-developer-text {
+    text-align: right; }
+  header #my-desk {
+    position: relative;
+    transform: rotate(-12deg);
+    width: 90%;
+    max-width: 800px;
+    height: 50vw;
+    max-height: 400px;
+    background: transparent url(/assets/svg/desktop.svg) no-repeat center center;
+    background-size: 500% 500%;
+    background-color: #966f33;
+    border: 2px solid black;
+    border-radius: 60px;
+    overflow-y: hidden;
+    -webkit-box-shadow: -6px 8px 12px -6px black;
+    -moz-box-shadow: -6px 8px 12px -6px black;
+    box-shadow: -6px 8px 12px -6px black; }
+    header #my-desk #laptop {
+      transform: rotate(-30deg);
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      width: 50%; }
+    header #my-desk #iphone {
+      transform: rotate(40deg);
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      width: 10%; }
+    header #my-desk #coffee {
+      transform: rotate(130deg);
+      position: absolute;
+      top: 10%;
+      right: 30%;
+      width: 13%; }
+      header #my-desk #coffee #coffee-contents {
+        transform-origin: center center;
+        animation: stir-coffee 60s -1s infinite linear forwards; }
+
+@keyframes stir-coffee {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+/*
+    ABOUT ME SECTION
+*/
+#about-me-section {
+  position: relative;
+  color: #d86608;
+  margin: 20px 0; }
+  #about-me-section #about-me-text-and-pic {
+    position: relative; }
+    #about-me-section #about-me-text-and-pic #about-me-text-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px 0;
+      background-color: #4f4b49; }
+    #about-me-section #about-me-text-and-pic #about-me-pic-container {
+      width: 90%;
+      max-width: 500px;
+      height: 90vw;
+      max-height: 500px;
+      margin: 0 auto;
+      background: #d86608 url(/assets/img/about_me.jpg) no-repeat center center;
+      background-size: contain;
+      background-blend-mode: multiply; }
+    #about-me-section #about-me-text-and-pic .text {
+      width: 80%;
+      font-size: 20px; }
+  #about-me-section #about-me-cta-arrow {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5em; }
+    #about-me-section #about-me-cta-arrow a {
+      color: #d86608;
+      transition: all 1.5s ease;
+      margin: 0 1vw; }
+      #about-me-section #about-me-cta-arrow a:hover {
+        transform: scale(1.1);
+        color: #4f4b49; }
+
+@media screen and (min-width: 768px) {
+  #about-me-text-and-pic {
+    width: 800px;
+    height: 850px; }
+    #about-me-text-and-pic #about-me-text-container {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      top: 0;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      -webkit-box-shadow: 0 8px 12px -6px black;
+      -moz-box-shadow: 0 8px 12px -6px black;
+      box-shadow: 0 8px 12px -6px black; }
+    #about-me-text-and-pic #about-me-pic-container {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 12px;
+      -webkit-box-shadow: 0 8px 12px -6px black;
+      -moz-box-shadow: 0 8px 12px -6px black;
+      box-shadow: 0 8px 12px -6px black; } }
+
+/*
+    WHAT I DO SECTION
+*/
+#what-i-do-section {
+  background-color: #d86608; }
+  #what-i-do-section #what-i-do__items {
+    max-width: 1100px; }
+    #what-i-do-section #what-i-do__items .what-i-do-item {
+      width: 80%;
+      max-width: 550px;
+      text-align: right;
+      background-color: #4f4b49;
+      padding: 1vw;
+      margin-left: 10%;
+      margin-bottom: 2vh;
+      -webkit-box-shadow: -6px 8px 12px -6px black;
+      -moz-box-shadow: -6px 8px 12px -6px black;
+      box-shadow: -6px 8px 12px -6px black; }
+      #what-i-do-section #what-i-do__items .what-i-do-item:nth-child(even) {
+        float: right;
+        margin-right: 10%; }
+      #what-i-do-section #what-i-do__items .what-i-do-item .what-i-do-item__title {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+        color: #fff; }
+      #what-i-do-section #what-i-do__items .what-i-do-item .what-i-do-item__subtitle {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+        color: #fff; }
+      #what-i-do-section #what-i-do__items .what-i-do-item .what-i-do-item__info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: left;
+        color: #aa7400; }
+
+/*
+    WHO I DO IT FOR SECTION
+*/
+#who-section {
+  background-color: #fff; }
+
+/*
+    WHY I DO IT SECTION
+*/
+#why-section {
+  background-color: #4f4b49;
+  color: #d86608; }
+
+/*
+    FOOTER SECTION
+*/
+footer {
+  overflow-y: visible;
+  padding-bottom: 50px; }
+  footer .circle-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+    margin: 50px auto 0;
+    border: solid 5px #4f4b49;
+    background: #fff url(/assets/img/stay_tuned_bitmoji.jpg) no-repeat center center;
+    background-size: contain; }
+    footer .circle-container > * {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -35px;
+      width: 70px;
+      height: 70px; }
+      footer .circle-container > *:nth-of-type(1) {
+        transform: rotate(0deg) translate(125px) rotate(0deg); }
+      footer .circle-container > *:nth-of-type(2) {
+        transform: rotate(60deg) translate(125px) rotate(-60deg); }
+      footer .circle-container > *:nth-of-type(3) {
+        transform: rotate(120deg) translate(125px) rotate(-120deg); }
+      footer .circle-container > *:nth-of-type(4) {
+        transform: rotate(180deg) translate(125px) rotate(-180deg); }
+      footer .circle-container > *:nth-of-type(5) {
+        transform: rotate(240deg) translate(125px) rotate(-240deg); }
+      footer .circle-container > *:nth-of-type(6) {
+        transform: rotate(300deg) translate(125px) rotate(-300deg); }
+    footer .circle-container li {
+      background-color: #000;
+      border-radius: 50%;
+      transition: .5s; }
+      footer .circle-container li:hover {
+        background-color: #4f4b49; }
+    footer .circle-container .circle__item {
+      display: flex;
+      justify-content: center;
+      max-width: 70px;
+      height: 70px;
+      transition: .5s;
+      color: #fff; }
+      footer .circle-container .circle__item:hover {
+        transform: scale(1.2);
+        color: #000; }
+      footer .circle-container .circle__item:after {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        font-size: 40px;
+        padding: 15px;
+        border-radius: 50%; }
+  footer #github:after {
+    content: "\f09b"; }
+  footer #codepen:after {
+    content: "\f1cb"; }
+  footer #instagram:after {
+    content: "\f16d"; }
+  footer #twitter:after {
+    content: "\f099"; }
+  footer #linkedin:after {
+    content: "\f0e1"; }
+  footer #mailto:after {
+    content: "\f003"; }

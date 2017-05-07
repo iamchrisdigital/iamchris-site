@@ -1,0 +1,439 @@
+// @import "compass/css3";
+
+
+
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    margin: -($item-size / 2);
+    width:  $item-size;
+    height: $item-size;
+
+    $angle: (360 / $item-count);
+    $rot: 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+
+/*
+    BACKGROUND COLORS
+*/
+
+$wht: #fff;
+$br-orange: #d86608;
+$dk-orange: #aa7400;
+$lt-grey: #7c634e;
+$dk-grey: #4f4b49;
+
+
+
+
+/*
+    GENERAL SECTION
+*/
+
+html {
+    background-color: $wht;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+
+
+    header, main, footer, .container {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        overflow-y: auto;
+    }
+
+    .section-contents {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-family: 'Lato', helvetica;
+        font-size: calc(1.25em + 2vmax);
+        font-weight: 700;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .subtitle {
+        font-family: 'Lato', helvetica;
+        font-size: calc(1.25em + 1vmax);
+        font-weight: 400;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .text {
+        font-family: 'Lato', helvetica;
+        font-size: 1.25em;
+        font-weight: 400;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    a {
+        color: #000;
+        cursor: pointer;
+    }
+
+    hr {
+        height: 12px;
+        border: 0;
+        box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/*
+    HEADER SECTION
+*/
+
+header {
+    position: relative;
+    background-color: $dk-grey;
+    color: #fff;
+
+
+    #i-am-a-web-developer-text {
+        text-align: right;
+    }
+
+    #my-desk {
+        position: relative;
+        transform: rotate(-12deg);
+        width: 90%;
+        max-width: 800px;
+        height: 50vw;
+        max-height: 400px;
+        background: transparent url(/assets/svg/desktop.svg) no-repeat center center;
+        background-size: 500% 500%;
+        background-color: #966f33;
+        border: 2px solid black;
+        border-radius: 60px;
+        overflow-y: hidden;
+        -webkit-box-shadow: -6px 8px 12px -6px black;
+        -moz-box-shadow: -6px 8px 12px -6px black;
+        box-shadow: -6px 8px 12px -6px black;
+
+
+        #laptop {
+            transform: rotate(-30deg);
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 50%;
+        }
+
+        #iphone {
+            transform: rotate(40deg);
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 10%;
+        }
+
+        #coffee {
+            transform: rotate(130deg);
+            position: absolute;
+            top: 10%;
+            right: 30%;
+            width: 13%;
+
+            #coffee-contents {
+                transform-origin: center center;
+                animation: stir-coffee 60s -1s infinite linear forwards;
+            }
+
+            @keyframes stir-coffee {
+                0% { transform: rotate(360deg); }
+                100% { transform: rotate(0deg); }
+            }
+        }
+    }
+}
+
+
+/*
+    ABOUT ME SECTION
+*/
+
+#about-me-section {
+    position: relative;
+    color: $br-orange;
+    margin: 20px 0;
+
+    #about-me-text-and-pic {
+        position: relative;
+
+
+        #about-me-text-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+            background-color: $dk-grey;
+        }
+
+        #about-me-pic-container {
+            width: 90%;
+            max-width: 500px;
+            height: 90vw;
+            max-height: 500px;
+            margin: 0 auto;
+            background: $br-orange url(/assets/img/about_me.jpg) no-repeat center center;
+            background-size: contain;
+            background-blend-mode: multiply;
+        }
+
+        .text {
+            width: 80%;
+            font-size: 20px;
+        }
+    }
+
+    #about-me-cta-arrow {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.5em;
+
+        a {
+            color: $br-orange;
+            transition: all 1.5s ease;
+            margin: 0 1vw;
+
+            &:hover {
+                transform: scale(1.1);
+                color: $dk-grey;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #about-me-text-and-pic {
+        width: 800px;
+        height: 850px;
+
+        #about-me-text-container {
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            -webkit-box-shadow: 0 8px 12px -6px black;
+            -moz-box-shadow: 0 8px 12px -6px black;
+            box-shadow: 0 8px 12px -6px black;
+        }
+
+        #about-me-pic-container {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 12px;
+            -webkit-box-shadow: 0 8px 12px -6px black;
+            -moz-box-shadow: 0 8px 12px -6px black;
+            box-shadow: 0 8px 12px -6px black;
+        }
+    }
+}
+
+
+/*
+    WHAT I DO SECTION
+*/
+
+#what-i-do-section {
+    background-color: $br-orange;
+
+    #what-i-do__items {
+        max-width: 1100px;
+
+        .what-i-do-item {
+            width: 80%;
+            max-width: 550px;
+            text-align: right;
+            background-color: $dk-grey;
+            padding: 1vw;
+            margin-left: 10%;
+            margin-bottom: 2vh;
+            -webkit-box-shadow: -6px 8px 12px -6px black;
+            -moz-box-shadow: -6px 8px 12px -6px black;
+            box-shadow: -6px 8px 12px -6px black;
+
+            &:nth-child(even) {
+                float: right;
+                margin-right: 10%;
+            }
+
+            .what-i-do-item__title {
+                width: 100%;
+                margin: 0;
+                text-align: right;
+                color: #fff;
+            }
+
+            .what-i-do-item__subtitle {
+                width: 100%;
+                margin: 0;
+                text-align: right;
+                color: #fff;
+            }
+
+
+            .what-i-do-item__info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: left;
+                color: $dk-orange;
+            }
+        }
+    }
+}
+
+
+/*
+    WHO I DO IT FOR SECTION
+*/
+
+#who-section {
+    background-color: #fff;
+
+}
+
+
+/*
+    WHY I DO IT SECTION
+*/
+
+#why-section {
+    background-color: $dk-grey;
+    color: $br-orange;
+
+}
+
+
+
+/*
+    FOOTER SECTION
+*/
+
+footer {
+    overflow-y: visible;
+    padding-bottom: 50px;
+
+
+    .circle-container {
+        @include on-circle($item-count: 6, $circle-size: 250px, $item-size: 70px);
+        margin: 50px auto 0;
+        border: solid 5px $dk-grey;
+        background: #fff url(/assets/img/stay_tuned_bitmoji.jpg) no-repeat center center;
+        background-size: contain;
+
+
+        li {
+            background-color: #000;
+            border-radius: 50%;
+            transition: .5s;
+
+            &:hover {
+                background-color: $dk-grey;
+            }
+        }
+
+        .circle__item {
+            display: flex;
+            justify-content: center;
+            max-width: 70px;
+            height: 70px;
+            transition: .5s;
+            color: #fff;
+
+            &:hover {
+                transform: scale(1.2);
+                color: #000;
+            }
+
+            &:after {
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                position: absolute;
+                font-size: 40px;
+                padding: 15px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    #github:after {
+        content: "\f09b";
+    }
+    #codepen:after {
+        content: "\f1cb";
+    }
+    #instagram:after {
+        content: "\f16d";
+    }
+    #twitter:after {
+        content: "\f099";
+    }
+    #linkedin:after {
+        content: "\f0e1";
+    }
+    #mailto:after {
+        content: "\f003";
+    }
+
+
+}

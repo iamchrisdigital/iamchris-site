@@ -149,7 +149,7 @@ header {
         transform: scale(1.1);
         color: #4f4b49; }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   #about-me-text-and-pic {
     width: 800px;
     height: 850px; }
@@ -207,17 +207,90 @@ header {
         color: #fff; }
       #what-i-do-section #what-i-do__items .what-i-do-item .what-i-do-item__info {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         text-align: left;
-        color: #aa7400; }
+        color: #aa7400;
+        font-size: 1.25em; }
+      #what-i-do-section #what-i-do__items .what-i-do-item .fa-4x {
+        font-size: 64px !important; }
 
 /*
     WHO I DO IT FOR SECTION
 */
 #who-section {
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 20px; }
+  #who-section #who-subtitle {
+    width: 80%; }
+  #who-section #who-images {
+    background-color: #4f4b49;
+    margin: 0 5vw;
+    width: 90vw; }
+    @media only screen and (min-width: 1200px) {
+      #who-section #who-images {
+        width: 800px;
+        margin: 0 auto; } }
+    #who-section #who-images .who-images-container {
+      width: 90vw;
+      float: left; }
+      @media only screen and (min-width: 768px) {
+        #who-section #who-images .who-images-container {
+          width: 45vw; } }
+      @media only screen and (min-width: 1200px) {
+        #who-section #who-images .who-images-container {
+          width: 400px; } }
+    #who-section #who-images .who-image {
+      float: left;
+      height: 200px;
+      background-size: contain !important;
+      transition: all 1.5s ease; }
+      #who-section #who-images .who-image--large {
+        width: 90vw;
+        height: 90vw; }
+        @media only screen and (min-width: 768px) {
+          #who-section #who-images .who-image--large {
+            width: 45vw;
+            height: 45vw; } }
+        @media only screen and (min-width: 1200px) {
+          #who-section #who-images .who-image--large {
+            width: 400px;
+            height: 400px; } }
+      #who-section #who-images .who-image--small {
+        width: 45vw;
+        height: 45vw; }
+        @media only screen and (min-width: 768px) {
+          #who-section #who-images .who-image--small {
+            width: 22.5vw;
+            height: 22.5vw; } }
+        @media only screen and (min-width: 1200px) {
+          #who-section #who-images .who-image--small {
+            width: 200px;
+            height: 200px; } }
+      #who-section #who-images .who-image:hover {
+        transform: scale(0.9);
+        opacity: .7; }
+    #who-section #who-images #who-image--ABI {
+      background: #7c634e url("/assets/img/who-logos/anheuser_busch.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--BP {
+      background: #7c634e url("/assets/img/who-logos/bluepoint_brewing.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--cadillac {
+      background: #7c634e url("/assets/img/who-logos/cadillac.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--ecco {
+      background: #7c634e url("/assets/img/who-logos/ecco_domani.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--GI {
+      background: #7c634e url("/assets/img/who-logos/goose_island.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--IMG {
+      background: #7c634e url("/assets/img/who-logos/img.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--malibu {
+      background: #7c634e url("/assets/img/who-logos/malibu.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--marriott {
+      background: #7c634e url("/assets/img/who-logos/marriott.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--TOH {
+      background: #7c634e url("/assets/img/who-logos/taste_of_home.jpg") no-repeat center center; }
+    #who-section #who-images #who-image--UFC {
+      background: #7c634e url("/assets/img/who-logos/ufc.jpg") no-repeat center center; }
 
 /*
     WHY I DO IT SECTION

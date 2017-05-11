@@ -253,7 +253,7 @@ header {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     #about-me-text-and-pic {
         width: 800px;
@@ -330,11 +330,16 @@ header {
 
             .what-i-do-item__info {
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 text-align: left;
                 color: $dk-orange;
+                font-size: 1.25em;
+            }
+
+            .fa-4x {
+                font-size: 64px !important;
             }
         }
     }
@@ -347,7 +352,120 @@ header {
 
 #who-section {
     background-color: #fff;
+    margin-bottom: 20px;
 
+
+    #who-subtitle {
+        width: 80%;
+    }
+
+    #who-images {
+        background-color: $dk-grey;
+        margin: 0 5vw;
+        // min-height: 500px;
+        width: 90vw;
+        // max-width: 1000px;
+
+        @media only screen and (min-width: 1200px) {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .who-images-container {
+            width: 90vw;
+            float: left;
+
+            @media only screen and (min-width: 768px) {
+                width: 45vw;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                width: 400px;
+            }
+        }
+
+        .who-image {
+            float: left;
+            height: 200px;
+            background-size: contain !important;
+            transition: all 1.5s ease;
+
+            &--large {
+                width: 90vw;
+                height: 90vw;
+
+                @media only screen and (min-width: 768px) {
+                    width: 45vw;
+                    height: 45vw;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+
+            &--small {
+                width: 45vw;
+                height: 45vw;
+
+                @media only screen and (min-width: 768px) {
+                    width: 22.5vw;
+                    height: 22.5vw;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+
+            &:hover {
+                transform: scale(.9);
+                opacity: .7;
+            }
+        }
+
+        #who-image--ABI {
+            background: $lt-grey url("/assets/img/who-logos/anheuser_busch.jpg") no-repeat center center;
+        }
+
+        #who-image--BP {
+            background: $lt-grey url("/assets/img/who-logos/bluepoint_brewing.jpg") no-repeat center center;
+        }
+
+        #who-image--cadillac {
+            background: $lt-grey url("/assets/img/who-logos/cadillac.jpg") no-repeat center center;
+        }
+
+        #who-image--ecco {
+            background: $lt-grey url("/assets/img/who-logos/ecco_domani.jpg") no-repeat center center;
+        }
+
+        #who-image--GI {
+            background: $lt-grey url("/assets/img/who-logos/goose_island.jpg") no-repeat center center;
+        }
+
+        #who-image--IMG {
+            background: $lt-grey url("/assets/img/who-logos/img.jpg") no-repeat center center;
+        }
+
+        #who-image--malibu {
+            background: $lt-grey url("/assets/img/who-logos/malibu.jpg") no-repeat center center;
+        }
+
+        #who-image--marriott {
+            background: $lt-grey url("/assets/img/who-logos/marriott.jpg") no-repeat center center;
+        }
+
+        #who-image--TOH {
+            background: $lt-grey url("/assets/img/who-logos/taste_of_home.jpg") no-repeat center center;
+        }
+
+        #who-image--UFC {
+            background: $lt-grey url("/assets/img/who-logos/ufc.jpg") no-repeat center center;
+        }
+    }
 }
 
 

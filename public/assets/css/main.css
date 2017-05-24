@@ -103,12 +103,6 @@ header {
         transform-origin: center center;
         animation: stir-coffee 60s -1s infinite linear forwards; }
 
-@keyframes stir-coffee {
-  0% {
-    transform: rotate(360deg); }
-  100% {
-    transform: rotate(0deg); } }
-
 /*
     ABOUT ME SECTION
 */
@@ -298,6 +292,14 @@ header {
 #why-section {
   background-color: #4f4b49;
   color: #d86608; }
+  #why-section .text {
+    color: #fff;
+    width: 80%;
+    max-width: 800px; }
+    #why-section .text i {
+      font-weight: bold; }
+  #why-section .subtitle {
+    color: #d86608; }
 
 /*
     FOOTER SECTION

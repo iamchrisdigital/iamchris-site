@@ -1,7 +1,6 @@
 // @import "compass/css3";
 
 
-
 /// Mixin to place items on a circle
 /// @author Hugo Giraudel
 /// @author Ana Tudor
@@ -48,8 +47,6 @@ $br-orange: #d86608;
 $dk-orange: #aa7400;
 $lt-grey: #7c634e;
 $dk-grey: #4f4b49;
-
-
 
 
 /*
@@ -126,7 +123,6 @@ body {
 }
 
 
-
 /*
     HEADER SECTION
 */
@@ -135,7 +131,6 @@ header {
     position: relative;
     background-color: $dk-grey;
     color: #fff;
-
 
     #i-am-a-web-developer-text {
         text-align: right;
@@ -157,7 +152,6 @@ header {
         -webkit-box-shadow: -6px 8px 12px -6px black;
         -moz-box-shadow: -6px 8px 12px -6px black;
         box-shadow: -6px 8px 12px -6px black;
-
 
         #laptop {
             transform: rotate(-30deg);
@@ -187,10 +181,10 @@ header {
                 animation: stir-coffee 60s -1s infinite linear forwards;
             }
 
-            @keyframes stir-coffee {
-                0% { transform: rotate(360deg); }
-                100% { transform: rotate(0deg); }
-            }
+            // @keyframes stir-coffee {
+            //     0% { transform: rotate(360deg); }
+            //     100% { transform: rotate(0deg); }
+            // }
         }
     }
 }
@@ -354,7 +348,6 @@ header {
     background-color: #fff;
     margin-bottom: 20px;
 
-
     #who-subtitle {
         width: 80%;
     }
@@ -477,8 +470,20 @@ header {
     background-color: $dk-grey;
     color: $br-orange;
 
-}
+    .text {
+        color: $wht;
+        width: 80%;
+        max-width: 800px;
 
+        i {
+            font-weight: bold;
+        }
+    }
+
+    .subtitle {
+        color: $br-orange;
+    }
+}
 
 
 /*
@@ -552,6 +557,4 @@ footer {
     #mailto:after {
         content: "\f003";
     }
-
-
 }
